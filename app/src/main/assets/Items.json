@@ -1,0 +1,14 @@
+{
+  "items" : [
+    {
+      "itemName" : "Huion H624",
+      "itemPrice" : "$100",
+      "itemImage" : "assets/huion.jpg"
+    },
+    {
+      "itemName" : "Xiaomi Wi-Fi Mesh Extender",
+      "itemPrice" : "$50",
+      "itemImage" : "assets/xiaomi.webp"
+    }
+  ]
+}

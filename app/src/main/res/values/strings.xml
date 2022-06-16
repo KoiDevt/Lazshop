@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">LazShop</string>
+
+    <string-array name="item_full_txt">
+        <item>Huion H624 Drawing Tablet</item>
+        <item>IPHONE 12 Pro</item>
+        <item>Apple Wireless Airpods</item>
+        <item>Xiaomi Mi Wi-Fi Extender</item>
+        <item>JBL Wireless T450 Bluetooth Headset</item>
+        <item>BM-800 Microphone Condenser</item>
+    </string-array>
+
+    <string-array name="item_prices">
+        <item>$ 1,500</item>
+        <item>$ 34,000</item>
+        <item>$ 3,450</item>
+        <item>$ 780</item>
+        <item>$ 900</item>
+        <item>$ 500</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
