@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,7 +61,7 @@ public class CartFragment extends Fragment implements RecyclerViewInterface {
         super.onViewCreated(view, savedInstanceState);
 
         RecyclerView recyclerView = view.findViewById(R.id.mCartRecyclerView);
-        Item_RecyclerViewAdapter adapter = new Item_RecyclerViewAdapter(requireActivity(), itemModels, this);
+        ItemCart_RecyclerViewAdapter adapter = new ItemCart_RecyclerViewAdapter(requireActivity(), itemModels, this);
         setItemModels();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
@@ -85,6 +84,7 @@ public class CartFragment extends Fragment implements RecyclerViewInterface {
                     innerValue.get("Price"),
                     Integer.parseInt(innerValue.get("ProductImage"))));
         }
+
     }
 
     @Override
