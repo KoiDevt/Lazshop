@@ -10,8 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.carteasy.v1.lib.Carteasy;
-
 public class ItemDescription extends AppCompatActivity {
+
 
     Carteasy cs = new Carteasy(); // TODO: Use an application-wide reference later.
 

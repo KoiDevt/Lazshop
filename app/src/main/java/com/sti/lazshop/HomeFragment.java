@@ -66,15 +66,15 @@ public class HomeFragment extends Fragment implements RecyclerViewInterface {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
-    private void setItemModels() {
-        String[] itemNames = getResources().getStringArray(R.array.item_full_txt);
-        String[] itemPrices = getResources().getStringArray(R.array.item_prices);
+            private void setItemModels() {
+                String[] itemNames = getResources().getStringArray(R.array.item_full_txt);
+                String[] itemPrices = getResources().getStringArray(R.array.item_prices);
 
-        for (int i = 0; i < itemNames.length; i++) {
-            itemModels.add(new ItemModel(
-                    itemNames[i],
-                    itemPrices[i],
-                    itemImages[i]));
+                for (int i = 0; i < itemNames.length; i++) {
+                    itemModels.add(new ItemModel(
+                            itemNames[i],
+                            itemPrices[i],
+                            itemImages[i]));
         }
     }
 
