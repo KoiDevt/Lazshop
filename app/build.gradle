@@ -41,7 +41,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
     implementation(name:'carteasy', ext:'aar')
-    implementation 'com.carteasy.v1.lib:carteasy:0.0.6'
 }
