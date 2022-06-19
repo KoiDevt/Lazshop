@@ -26,8 +26,8 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="116dp"
-                android:layout_height="112dp"
+                android:layout_width="112dp"
+                android:layout_height="104dp"
                 android:layout_marginStart="4dp"
                 android:padding="3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -71,6 +71,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.97"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/remove_button"
+                android:layout_width="100dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Remove"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/confirm_button"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
