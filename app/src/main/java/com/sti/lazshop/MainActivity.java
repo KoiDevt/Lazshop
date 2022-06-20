@@ -29,10 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.cart:
                     replaceFragment(new CartFragment());
                     break;
-                case R.id.account:
-                    replaceFragment(new AccountFragment());
-                    break;
-
             }
             return true;
         });

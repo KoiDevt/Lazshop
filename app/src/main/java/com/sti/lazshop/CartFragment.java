@@ -63,13 +63,29 @@ public class CartFragment extends Fragment implements RecyclerViewInterface {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-
+        Button confirmButton = view.findViewById(R.id.confirm_button);
+        Button removeButton = view.findViewById(R.id.remove_button);
         RecyclerView recyclerView = view.findViewById(R.id.mCartRecyclerView);
         ItemCart_RecyclerViewAdapter adapter = new ItemCart_RecyclerViewAdapter(requireActivity(), itemModels, this);
         setItemModels();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
+
+        //remove item to cart
+        removeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //confirms item in the cart
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void setItemModels() {
