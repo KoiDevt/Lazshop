@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Map;
 
 
-
 public class CartFragment extends Fragment implements RecyclerViewInterface {
 
     private static final String ARG_PARAM1 = "param1";
@@ -31,6 +30,8 @@ public class CartFragment extends Fragment implements RecyclerViewInterface {
     private String mParam2;
 
     ArrayList<ItemModel> itemModels = new ArrayList<>();
+
+    private final Carteasy cs = new Carteasy();
 
     public CartFragment() {
 
@@ -65,27 +66,15 @@ public class CartFragment extends Fragment implements RecyclerViewInterface {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button confirmButton = view.findViewById(R.id.confirm_button);
-        Button removeButton = view.findViewById(R.id.remove_button);
         RecyclerView recyclerView = view.findViewById(R.id.mCartRecyclerView);
-        ItemCart_RecyclerViewAdapter adapter = new ItemCart_RecyclerViewAdapter(requireActivity(), itemModels, this);
+        ItemCart_RecyclerViewAdapter adapter = new ItemCart_RecyclerViewAdapter(requireActivity(), itemModels, this, cs);
         setItemModels();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
-        Carteasy cs = new Carteasy();
-
-        //remove item from cart
-        removeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cs.RemoveId(String ,requireActivity().getApplicationContext());
-            }
-        });
     }
 
     private void setItemModels() {
         Map<Integer, Map> data;
-        Carteasy cs = new Carteasy(); // TODO: Use an application-wide reference later.
         data = cs.ViewAll(requireActivity());
 
         // Guard early and guard lazily.
