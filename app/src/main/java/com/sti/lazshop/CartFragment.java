@@ -1,5 +1,6 @@
 package com.sti.lazshop;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.carteasy.v1.lib.Carteasy;
 
@@ -70,20 +72,13 @@ public class CartFragment extends Fragment implements RecyclerViewInterface {
         setItemModels();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
+        Carteasy cs = new Carteasy();
 
-        //remove item to cart
+        //remove item from cart
         removeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-            }
-        });
-
-        //confirms item in the cart
-        confirmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
+                cs.RemoveId(String ,requireActivity().getApplicationContext());
             }
         });
     }
