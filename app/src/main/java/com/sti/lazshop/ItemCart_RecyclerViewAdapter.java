@@ -46,6 +46,20 @@ public class ItemCart_RecyclerViewAdapter extends RecyclerView.Adapter<ItemCart_
         holder.itemPrice.setText(itemModels.get(position).getItemPrice());
         holder.imageView.setImageResource(itemModels.get(position).getImage());
 
+        holder.buttonConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { //past due, we'll just pretend that this button confirms the order
+                carteasy.RemoveId(itemModels.get(holder.getAdapterPosition()).getItemName(),
+                        context.getApplicationContext());
+
+                itemModels.remove(holder.getAdapterPosition());
+                notifyItemRemoved(holder.getAdapterPosition());
+
+                Toast.makeText(context, "Item confirmed!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
         holder.buttonRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
