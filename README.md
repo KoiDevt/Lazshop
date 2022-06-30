@@ -1,2 +1,2 @@
-# ShoppingApp
+# Lazshop
 >&lt;
